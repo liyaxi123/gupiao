@@ -198,7 +198,7 @@ const buildCandlestickImage = (rawKline) => {
   const kline = Array.isArray(rawKline) ? rawKline : []
   const data = kline
     .map((item) => {
-      const date = item.date ?? item.day ?? item.time ?? ''
+      const date = item.date ?? item.trade_date ?? item.day ?? item.time ?? ''
       const open = Number(item.open)
       const close = Number(item.close)
       const high = Number(item.high)
